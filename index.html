@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy 21st Birthday, My Love ❤️</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Pacifico&display=swap');
+
+  :root{
+    --bg:#fff0f7;
+    --card:#ffffff;
+    --pink:#ff9acb;
+    --pinkdark:#ff4f9d;
+    --purple:#b37bff;
+    --text:#444;
+  }
+
+  *{margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+  body{
+    background: radial-gradient(circle at top right, #fff0f8, #ffe9f4, #fff6fb);
+    min-height:100vh;
+    overflow-x:hidden;
+    position:relative;
+  }
+
+  /* FLOATING FLOWERS */
+  .floating{position:absolute; font-size:2.4rem; animation:float 6s ease-in-out infinite; opacity:0.8;}
+  @keyframes float{0%{transform:translateY(0);}50%{transform:translateY(-40px);}100%{transform:translateY(0);}}
+
+  /* SPARKLES */
+  .sparkle{position:absolute; font-size:1.7rem; animation:twinkle 3s ease-in-out infinite; opacity:0.7;}
+  @keyframes twinkle{0%{opacity:0;}50%{opacity:1;}100%{opacity:0;}}
+
+  header{text-align:center; padding:40px 20px; position:relative; z-index:10;}
+  header h1{font-family:'Pacifico', cursive; font-size:3.3rem; color:var(--pinkdark); text-shadow:0 4px 12px rgba(255,0,100,0.12);} 
+
+  /* PHOTO — SQUARE */
+  .photo-box{
+    width:250px; height:270px; margin:20px auto;
+    border-radius:18px; border:6px solid var(--pinkdark);
+    overflow:hidden; box-shadow:0 0 25px rgba(255,92,168,0.45);
+    cursor:pointer; transition:0.25s; background:#fff;
+  }
+  .photo-box:hover{transform:scale(1.05);} 
+  .photo-box img{width:100%; height:100%; object-fit:cover;}
+
+  /* HEART POP ANIMATION */
+  @keyframes heartFloat{0%{transform:translateY(0) scale(1); opacity:1;}100%{transform:translateY(-120px) scale(1.6); opacity:0;}}
+
+  .letter{
+    max-width:840px; margin:30px auto; background:var(--card);
+    padding:30px; border-radius:22px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  }
+  .letter h2{text-align:center; color:var(--pinkdark); margin-bottom:18px; font-size:2.1rem;} 
+  .letter p{font-size:1.15rem; line-height:1.8; color:var(--text); margin:15px 0; opacity:0; transition:1s ease;} 
+
+  .btn{
+    display:block; margin:30px auto; padding:13px 28px;
+    background:linear-gradient(135deg, var(--pinkdark), var(--purple));
+    color:#fff; border:none; border-radius:40px;
+    font-size:1.15rem; cursor:pointer; transition:0.25s;
+    box-shadow:0 6px 18px rgba(255,0,120,0.25);
+  }
+  .btn:hover{transform:scale(1.06);} 
+
+  .hidden-message{
+    max-width:720px; margin:20px auto; background:var(--pinkdark);
+    padding:22px; border-radius:18px; color:#fff;
+    font-size:1.35rem; text-align:center; display:none;
+    box-shadow:0 6px 18px rgba(255,0,120,0.3);
+  }
+
+  .gift-box{
+    width:130px; height:130px;
+    background:linear-gradient(135deg, var(--pinkdark), var(--purple));
+    margin:45px auto; border-radius:18px;
+    position:relative; cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 10px 22px rgba(150,0,100,0.25);
+  } 
+  .gift-box:hover{transform:scale(1.06);} 
+  .gift-box:before{
+    content:'🎁'; position:absolute; top:50%; left:50%;
+    transform:translate(-50%, -50%); font-size:3.3rem;
+  } 
+  #gift-surprise{display:none; font-size:1.4rem; text-align:center; margin-top:20px; color:var(--pinkdark);} 
+  footer{text-align:center; color:var(--pinkdark); margin-top:40px; padding-bottom:50px; font-size:1rem;} 
+</style>
+</head>
+<body>
+
+<!-- FLOATING FLOWERS -->
+<div class="floating" style="top:12%; left:10%">🌸</div>
+<div class="floating" style="top:40%; left:80%; animation-delay:1s">💮</div>
+<div class="floating" style="top:75%; left:20%; animation-delay:2.2s">🌺</div>
+<div class="floating" style="top:30%; left:50%; animation-delay:3s">🌷</div>
+<div class="floating" style="top:60%; left:15%; animation-delay:1.6s">🌼</div>
+
+<!-- SPARKLES -->
+<div class="sparkle" style="top:20%; left:30%">✨</div>
+<div class="sparkle" style="top:65%; left:70%; animation-delay:1.3s">✨</div>
+<div class="sparkle" style="top:82%; left:40%; animation-delay:.7s">✨</div>
+<div class="sparkle" style="top:10%; left:55%; animation-delay:2s">✨</div>
+
+<header>
+  <h1>Happy 21st Birthday, My Love ❤️</h1>
+  <div class="photo-box" onclick="photoClick(event)">
+    <img src="HER_PICTURE.jpg" alt="Her Photo" />
+  </div>
+</header>
+
+<section class="letter">
+  <h2>My Love Letter to You 💌</h2>
+  <p id="line1">Happy 21st Birthday, my Love, my Angelic Face
+Thank you for
+loving me, understanding me, and growing with me.</p>
+  <p id="line2">You are God's gift to my life, and I thank Him every day for you.</p>
+  <p id="line3">I promise to love you deeper, to be better for you, and to stay with you through every high and low.</p>
+  <p id="line4">Mahal na mahal kita, Glaidel. Forever with you is my dream - and I will work hard to earn that, Love.
+- Your Love</p>
+  <button class="btn" onclick="revealLetter()">Open My Heart 💖</button>
+</section>
+
+<div id="secret" class="hidden-message">You are the best thing that ever happened to me. I love you endlessly. 💗</div>
+<div class="gift-box" onclick="openGift()"></div>
+<div id="gift-surprise">🎉 Surprise! My greatest gift is YOU. 🎉</div>
+<footer>Made with love, just for you. ❤️</footer>
+
+<script>
+// 1 — PHOTO HEARTS
+function photoClick(event){
+  for(let i=0;i<20;i++){
+    const heart=document.createElement('div');
+    heart.innerHTML='💗';
+    heart.style.position='absolute';
+    heart.style.left=(event.clientX+Math.random()*30-15)+'px';
+    heart.style.top=(event.clientY+Math.random()*30-15)+'px';
+    heart.style.fontSize=(14+Math.random()*14)+'px';
+    heart.style.pointerEvents='none';
+    heart.style.animation='heartFloat 1.8s ease-out forwards';
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(),2000);
+  }
+  document.getElementById('secret').style.display='block';
+}
+
+// 2 — REVEAL LETTER LINE BY LINE
+let step=1;
+function revealLetter(){
+  if(step<=4){
+    document.getElementById('line'+step).style.opacity='1';
+    step++;
+  }
+  if(step>4){
+    document.getElementById('secret').style.display='block';
+    window.scrollTo({top:document.getElementById('secret').offsetTop, behavior:'smooth'});
+  }
+}
+
+// 3 — GIFT BOX
+function openGift(){
+  document.getElementById('gift-surprise').style.display='block';
+  const gift=document.querySelector('.gift-box');
+  gift.style.transform='scale(1.2) rotate(10deg)';
+  setTimeout(()=>gift.style.transform='scale(1) rotate(0deg)',800);
+}
+</script>
+</body>
+</html>
